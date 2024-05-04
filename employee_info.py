@@ -2,7 +2,7 @@
 employee_data = [
     {"name": "John", "age": 30, "department": "Sales", "salary": 50000},
     {"name": "Jane", "age": 25, "department": "Marketing", "salary": 60000},
-    {"name": "Mary", "age": 23, "department": "Marketing", "salary": 56000},
+    {"name": "Mary", "age": 23, "department": "Marketing", "salary": 55000},
     {"name": "Chloe",  "age": 35, "department": "Engineering", "salary": 70000},
     {"name": "Mike", "age": 32, "department": "Engineering", "salary": 65000},
     {"name": "Peter", "age": 40, "department": "Sales", "salary": 60000}
@@ -21,7 +21,6 @@ def get_employees_by_age_range(age_lower_limit, age_upper_limit):#the parameter 
 def calculate_average_salary():
     total = 0
     average = 0
-
     #add your implementation to calculate here
     for item in employee_data:
         total = total + item['salary']
