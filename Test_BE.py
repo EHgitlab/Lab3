@@ -1,5 +1,5 @@
 import Lab2.BE as be
-
+#test_BE.py
 def test_bmi_normal_weight():
     result = be.conditional_queue(20)
     assert (result == -1)

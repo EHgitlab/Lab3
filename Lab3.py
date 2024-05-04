@@ -40,7 +40,6 @@ def bubble_sort(arr, sorting_order):
         arr_result = 0
 
     return arr_result
-
 def main():
     # Driver code to test above
     arr = [64, 34, 25, 12, 22, 11, 90]
