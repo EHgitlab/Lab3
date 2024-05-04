@@ -1,4 +1,4 @@
-import Lab2.Lab2 as temp
+import Lab2 as temp
 def test_calc_min_max_temperature():
     input_arr = [23.0, 14.14, 51.0, 69.41, 51.0, 216.0, 136.0, 63.0, 71.0, 13.0, 75.0, 23.32]
     test_arr = (13.0, 216.0)
