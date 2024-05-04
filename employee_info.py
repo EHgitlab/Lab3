@@ -7,14 +7,14 @@ employee_data = [
     {"name": "Mike", "age": 32, "department": "Engineering", "salary": 65000},
     {"name": "Peter", "age": 40, "department": "Sales", "salary": 60000}
 ]
-
-def get_employees_by_age_range(age_lower_limit, age_upper_limit):
+#name, age, department, salary
+def get_employees_by_age_range(age_lower_limit, age_upper_limit):#the parameter will be a string
     result = []
 
     # check for age limits and append the item to result
-    for item in employee_data:
+    for item in employee_data: #each item is each dictionary
         if int(item["age"]) > int(age_lower_limit) and int(item["age"]) < int(age_upper_limit):
-            result.append(item)
+            result.append(item) #item will be appended to your result.
 
     return result
 
@@ -23,7 +23,10 @@ def calculate_average_salary():
     average = 0
 
     #add your implementation to calculate here
+    for item in employee_data:
+        total = total + item['salary']
 
+    average = total/len(employee_data)
 
     return average
 
@@ -31,7 +34,9 @@ def get_employees_by_dept(department):
     result = []
 
     # Add your implementation from here
-
+    for item in employee_data:
+        if item['department'] == department:
+            result.append(item)
 
     return result
 
@@ -43,15 +48,15 @@ def display_all_records():
 
 def display_records(employee_info):
     print(("Name" + "\t" +"Age" +"\t" +"Department" +"\t" +"Salary" ).expandtabs(15))
-    for item in employee_info:
+    for item in employee_info:#get each disctionary
         print((item["name"] + "\t" + str(item["age"]) + "\t" + item["department"] + "\t" + str(item["salary"])).expandtabs(15))
 
-def display_main_menu():
+def display_main_menu(): #display all options that are available
 
     print("\n----- Employee information Tracker -----")
 
     print("Select option\n")
-
+    #there are 4 options available
     print("1 - Display all records")
     print("2 - Display average salary")
     print("3 - Display employee within age range")
@@ -67,8 +72,8 @@ def display_main_menu():
 
     elif option == '2':
         average_salary = calculate_average_salary()
-        print("Average salary = " + str(average_salary))
-
+        print("\nAverage salary = " + str(average_salary)) #convert the float to
+# 2 dec places
     elif option == '3':
         age_lower_limit = input("age (Lower Limit) = ")
         age_upper_limit = input("age (Uper Limit) = ")
@@ -84,6 +89,7 @@ def display_main_menu():
     elif option == 'Q':
         quit()
 
+#starting point
 def main():
 
     while (True):
